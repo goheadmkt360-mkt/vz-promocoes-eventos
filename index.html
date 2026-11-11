@@ -26,6 +26,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
         <a href="#servicos">Serviços</a>
         <a href="#sobre">A VZ</a>
+        <a href="#contato">Orçamento</a>
       </nav>
     </header>
 
@@ -59,20 +60,66 @@
         </div>
         <div class="service-grid">
           <article class="service-card service-card-promo">
-            <div class="service-card-top"><span>01 / 03</span><span class="service-icon promo-icon" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="service-card-top"><span>01 / 03</span></div>
             <h3>Promotoras<br />e promotores</h3>
             <p>Profissionais para eventos e ações promocionais.</p>
           </article>
           <article class="service-card service-card-valet">
-            <div class="service-card-top"><span>02 / 03</span><span class="service-icon valet-icon" aria-hidden="true"><i></i><b></b></span></div>
+            <div class="service-card-top"><span>02 / 03</span></div>
             <h3>Manobristas</h3>
             <p>Serviço de manobristas para apoiar a chegada e a saída do público.</p>
           </article>
           <article class="service-card service-card-clean">
-            <div class="service-card-top"><span>03 / 03</span><span class="service-icon clean-icon" aria-hidden="true"><i></i><b></b></span></div>
+            <div class="service-card-top"><span>03 / 03</span></div>
             <h3>Limpeza<br />para eventos</h3>
             <p>Serviço de limpeza para apoiar a organização e o cuidado dos espaços do evento.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contato" aria-labelledby="contact-title">
+        <div class="contact-layout section-wrap">
+          <div class="contact-copy">
+            <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">✳</span> PRÓXIMO PASSO</p>
+            <h2 id="contact-title">Conte sobre<br />o seu <span>evento.</span></h2>
+            <p>Compartilhe as informações principais para a VZ conhecer sua necessidade e retornar pelo e-mail.</p>
+            <div class="contact-email">
+              <span class="contact-email-label">Contato comercial</span>
+              <a href="mailto:atendimento@vzpromocoeseventos.com.br">atendimento@vzpromocoeseventos.com.br</a>
+            </div>
+            <p class="contact-privacy">Ao clicar em enviar, seu aplicativo de e-mail será aberto com os dados preenchidos. O site não armazena as informações.</p>
+          </div>
+
+          <form class="briefing-card" id="event-briefing-form" action="mailto:atendimento@vzpromocoeseventos.com.br" method="post" enctype="text/plain">
+            <div class="briefing-heading"><span>INFORMAÇÕES DO EVENTO</span><span>VZ / 01</span></div>
+            <div class="briefing-fields">
+              <label class="field full" for="event-name">Nome ou tipo de evento <span aria-hidden="true">*</span>
+                <input id="event-name" name="eventName" type="text" placeholder="Ex.: encontro anual" required />
+              </label>
+              <label class="field" for="event-date">Data prevista <span aria-hidden="true">*</span>
+                <input id="event-date" name="eventDate" type="date" required />
+              </label>
+              <label class="field" for="event-location">Cidade ou local <span aria-hidden="true">*</span>
+                <input id="event-location" name="eventLocation" type="text" placeholder="Cidade / espaço" required />
+              </label>
+              <fieldset class="field service-field full">
+                <legend>Serviço de interesse <span aria-hidden="true">*</span></legend>
+                <div class="service-choices">
+                  <label class="service-choice"><input type="checkbox" name="services" value="Promotoras e promotores" /><span>Promoção</span></label>
+                  <label class="service-choice"><input type="checkbox" name="services" value="Manobristas" /><span>Manobristas</span></label>
+                  <label class="service-choice"><input type="checkbox" name="services" value="Limpeza para eventos" /><span>Limpeza</span></label>
+                </div>
+                <span class="field-hint">Selecione uma ou mais frentes.</span>
+              </fieldset>
+              <label class="field full" for="event-notes">Observações <span class="optional-label">opcional</span>
+                <textarea id="event-notes" name="eventNotes" rows="3" placeholder="Informações adicionais"></textarea>
+              </label>
+            </div>
+            <button class="button button-submit" type="submit">Enviar <span aria-hidden="true">↗</span></button>
+            <p class="send-help">Revise e envie a mensagem pelo seu aplicativo de e-mail.</p>
+            <p class="field-footnote">* Campos obrigatórios.</p>
+            <p class="briefing-status" id="briefing-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
 
