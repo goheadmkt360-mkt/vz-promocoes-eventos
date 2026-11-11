@@ -27,11 +27,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .site-header { position: relative; z-index: 10; display: flex; height: 88px; align-items: center; justify-content: space-between; padding: 0 clamp(22px, 6vw, 90px); border-bottom: 1px solid var(--line); background: var(--cream); }
 .brand { display: inline-flex; min-height: 48px; align-items: center; gap: 12px; text-decoration: none; }
-.brand-symbol-wrap { display: grid; width: 58px; height: 46px; flex: 0 0 58px; place-items: center; }
-.brand-symbol { display: block; width: 56px; height: 38px; object-fit: contain; transform-origin: center; animation: vz-spin 16s linear infinite; }
+.brand-symbol-wrap { display: grid; width: 58px; height: 46px; flex: 0 0 58px; place-items: center; perspective: 520px; transform-style: preserve-3d; }
+.brand-symbol { display: block; width: 56px; height: 38px; object-fit: contain; transform-origin: center; transform-style: preserve-3d; animation: vz-spin-3d 16s linear infinite; filter: drop-shadow(1px 1px 0 rgba(12, 91, 85, .62)) drop-shadow(2px 2px 0 rgba(12, 91, 85, .28)); }
+.site-header .brand-symbol-wrap { width: 70px; flex-basis: 70px; }
+.site-header .brand-symbol { width: 68px; height: 46px; }
 .brand-name { color: var(--ink); font-family: var(--rounded); font-size: 16px; font-weight: 700; letter-spacing: -.04em; }
 .brand:hover .brand-symbol, .brand:focus-visible .brand-symbol { animation-play-state: paused; }
-@keyframes vz-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes vz-spin-3d {
+  from { transform: rotateX(-10deg) rotateY(0deg) rotateZ(-3deg); }
+  50% { transform: rotateX(10deg) rotateY(180deg) rotateZ(3deg); }
+  to { transform: rotateX(-10deg) rotateY(360deg) rotateZ(-3deg); }
+}
 .site-nav { display: flex; align-items: center; gap: clamp(21px, 3.4vw, 46px); }
 .site-nav > a { font-size: 12px; font-weight: 700; text-decoration: none; transition: color .18s ease; }
 .site-nav > a:hover, .text-link:hover { color: var(--teal); }
@@ -115,7 +121,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .site-footer { padding: 30px 0 16px; background: var(--ink); color: var(--white); }
 .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 22px; }
 .brand-footer .brand-name { color: var(--cream); font-size: 14px; }
-.brand-footer .brand-symbol { filter: brightness(1.5); }
+.brand-footer .brand-symbol { filter: brightness(1.5) drop-shadow(1px 1px 0 rgba(201, 221, 115, .58)) drop-shadow(2px 2px 0 rgba(201, 221, 115, .25)); }
 .footer-top { display: inline-flex; align-items: center; gap: 10px; color: var(--cream); font-size: 9px; text-decoration: none; }
 .footer-top span { color: var(--lime); font-size: 14px; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 18px; padding-top: 12px; border-top: 1px solid rgba(245,243,234,.18); color: #9fb2ad; font-size: 8px; }
@@ -135,8 +141,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   html { scroll-padding-top: 76px; }
   .site-header { height: 70px; padding-inline: 17px; }
   .brand { gap: 7px; }
-  .brand-symbol-wrap { width: 45px; height: 40px; flex-basis: 45px; }
-  .brand-symbol { width: 45px; height: 33px; }
+  .site-header .brand-symbol-wrap { width: 54px; height: 40px; flex-basis: 54px; }
+  .site-header .brand-symbol { width: 52px; height: 36px; }
+  .brand-footer .brand-symbol-wrap { width: 45px; height: 40px; flex-basis: 45px; }
+  .brand-footer .brand-symbol { width: 45px; height: 33px; }
   .brand-name { font-size: 13px; }
   .menu-toggle { display: inline-flex; min-height: 42px; align-items: center; gap: 9px; padding: 7px 0 7px 8px; border: 0; background: transparent; color: var(--ink); font-size: 10px; font-weight: 700; cursor: pointer; }
   .menu-icon { display: flex; width: 17px; flex-direction: column; gap: 5px; }
