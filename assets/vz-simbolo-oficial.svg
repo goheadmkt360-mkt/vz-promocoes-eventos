@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="121" height="77" viewBox="0 0 121 77" role="img" aria-labelledby="title desc">
+  <title id="title">Símbolo VZ</title>
+  <desc id="desc">Monograma VZ em verde teal, com ponto lima e fundo transparente.</desc>
+  <path d="M10 17 L30 43 L50 16 H92 L69 43 H88" fill="none" stroke="#167A73" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="94" cy="43" r="6" fill="#C9DD73"/>
+</svg>
