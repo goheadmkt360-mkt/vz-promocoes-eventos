@@ -41,7 +41,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: clamp(38px, 7vw, 92px); padding-top: 75px; padding-bottom: 24px; }
 .hero-copy { max-width: 540px; }
 .eyebrow { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--teal); font-family: var(--rounded); font-size: 9px; font-weight: 700; letter-spacing: .11em; line-height: 1.5; }
-.eyebrow-mark { color: var(--teal); font-size: 14px; }
 .hero h1, .section-heading h2, .about-copy h2 { margin: 22px 0 18px; font-family: var(--rounded); font-weight: 700; letter-spacing: -.065em; line-height: 1.02; }
 .hero h1 { max-width: 550px; font-size: clamp(48px, 6.2vw, 78px); }
 .hero h1 span, .section-heading h2 span, .about-copy h2 span { color: var(--teal); }
@@ -52,8 +51,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .button-primary { background: var(--teal); color: var(--white); }
 .button-primary:hover { background: var(--ink); }
 .button span { font-size: 15px; }
-.text-link { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; text-decoration: none; transition: color .18s ease; }
-.text-link span { font-size: 15px; }
+.text-link { display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; text-decoration: none; transition: color .18s ease; }
 .hero-note { display: flex; align-items: center; gap: 11px; margin-top: 24px; color: #718184; font-size: 10px; }
 .hero-note-line { width: 24px; height: 1px; background: var(--teal); }
 .hero-visual { min-width: 0; margin: 0; }
@@ -76,9 +74,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .service-card p { max-width: 290px; margin-bottom: 21px; color: var(--slate); font-size: 10px; line-height: 1.75; }
 
 .about-section { background: var(--mist); }
-.about-wrap { display: grid; grid-template-columns: .55fr 1.45fr; align-items: center; gap: clamp(38px, 9vw, 126px); padding-top: 86px; padding-bottom: 91px; }
-.about-mark { display: grid; width: clamp(150px, 18vw, 210px); aspect-ratio: 1.35; place-items: center; justify-self: center; }
-.about-mark img { display: block; width: 100%; height: 100%; object-fit: contain; opacity: .96; }
+.about-wrap { display: grid; grid-template-columns: 1fr; padding-top: 86px; padding-bottom: 91px; }
 .about-copy { max-width: 665px; }
 .about-copy h2 { margin: 17px 0 17px; font-size: clamp(38px, 4.5vw, 54px); }
 .about-copy h2 span { color: var(--teal); }
@@ -86,7 +82,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .contact-section { padding: 82px 0; background: var(--ink); color: var(--white); }
 .contact-layout { display: grid; grid-template-columns: .86fr 1.14fr; align-items: center; gap: clamp(35px, 7vw, 90px); }
-.contact-copy .eyebrow, .contact-copy .eyebrow-mark { color: var(--lime); }
+.contact-copy .eyebrow { color: var(--lime); }
 .contact-copy h2 { max-width: 520px; margin: 22px 0 18px; font-family: var(--rounded); font-size: clamp(42px, 5.3vw, 64px); font-weight: 700; letter-spacing: -.065em; line-height: 1.02; }
 .contact-copy h2 span { color: var(--lime); }
 .contact-copy > p:not(.eyebrow) { max-width: 420px; margin: 0; color: var(--cream); font-size: 13px; line-height: 1.8; }
@@ -172,8 +168,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-card-top { height: 20px; }
   .service-card h3 { margin: 13px 0 10px; font-size: 25px; }
   .service-card p { max-width: 390px; margin-bottom: 17px; font-size: 10px; }
-  .about-wrap { grid-template-columns: 1fr; gap: 12px; padding-top: 62px; padding-bottom: 69px; }
-  .about-mark { width: 90px; margin-bottom: 7px; justify-self: start; }
+  .about-wrap { padding-top: 62px; padding-bottom: 69px; }
   .about-copy h2 { font-size: clamp(38px, 9.3vw, 51px); }
   .about-copy > p:not(.eyebrow) { font-size: 10px; }
   .contact-section { padding: 58px 0; }
