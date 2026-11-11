@@ -71,10 +71,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-visual figcaption { margin-top: 9px; color: var(--slate); font-size: 9px; line-height: 1.5; }
 
 .services-section { padding-top: 30px; padding-bottom: 107px; }
-.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 35px; margin-bottom: 35px; }
+.section-heading { margin-bottom: 35px; }
 .section-heading h2 { margin: 19px 0 0; font-size: clamp(40px, 4.7vw, 58px); }
 .section-heading h2 span { display: inline-block; }
-.section-heading > p { max-width: 330px; margin: 0 2% 0 0; color: var(--slate); font-size: 12px; line-height: 1.75; }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
 .service-card { display: flex; min-height: 250px; flex-direction: column; padding: 21px 25px 22px; border-right: 1px solid var(--line); transition: background .18s ease; }
 .service-card:last-child { border-right: 0; }
@@ -172,9 +171,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .hero-image-frame img { object-position: 62% center; }
   .hero-visual figcaption { font-size: 8px; }
   .services-section { padding-top: 30px; padding-bottom: 74px; }
-  .section-heading { align-items: flex-start; flex-direction: column; gap: 14px; margin-bottom: 24px; }
+  .section-heading { margin-bottom: 24px; }
   .section-heading h2 { font-size: clamp(39px, 9.7vw, 53px); }
-  .section-heading > p { max-width: 440px; margin: 0; font-size: 11px; }
   .service-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 210px; padding: 19px 19px 21px; border-right: 0; border-bottom: 1px solid var(--line); }
   .service-card:last-child { border-bottom: 0; }
